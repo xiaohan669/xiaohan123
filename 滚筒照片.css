@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    height:100%
+}
+
+body{
+    perspective: 5000px;
+    transform-style: preserve-3d;
+    height:100%;
+}
+
+@keyframes run{
+    0%{
+    transform: translate(-50% ,-80%) rotateY(0deg);
+
+    }
+    100%{
+    transform: translate(-50% ,-80%) rotateY(360deg);
+
+    }
+}
+
+div.wrapper{
+    position: absolute;
+    left: calc(50%);
+    top:calc(50%);
+    width:300px;
+    height:300px;
+    transform: translate(-50% ,-80%);
+    transform-style: preserve-3d;
+    animation: run 20s cubic-bezier(0,0,1,1) infinite;
+
+}
+img{
+    position: absolute;
+    /* backface-visibility: hidden;   决定一个元素背面面向用户时是否可见，需要直接在该元素上定义 <' backface-visibility '> 属性，而不能在其父元素上，因为该属性默认为不可继承。 */
+    width:300px;
+}
+
+img:nth-of-type(1) {
+    transform: rotateY(45deg) translateZ(500px);
+}
+img:nth-of-type(2) {
+    transform: rotateY(90deg) translateZ(500px);
+}
+img:nth-of-type(3) {
+    transform: rotateY(135deg) translateZ(500px);
+}
+img:nth-of-type(4) {
+    transform: rotateY(180deg) translateZ(500px);
+}
+img:nth-of-type(5) {
+    transform: rotateY(225deg) translateZ(500px);
+}
+img:nth-of-type(6) {
+    transform: rotateY(270deg) translateZ(500px);
+}
+img:nth-of-type(7) {
+    transform: rotateY(315deg) translateZ(500px);
+}
+img:nth-of-type(8) {
+    transform: rotateY(360deg) translateZ(500px);
+}
